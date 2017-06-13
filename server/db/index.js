@@ -5,7 +5,6 @@ const db = require('./constants');
 mongoose.Promise = require('bluebird');
 
 module.exports = () => {
-  // Find the appropriate database to connect to, default to localhost if not found.
   const connect = () => {
     mongoose.connect(db, (err) => {
       if (err) {
